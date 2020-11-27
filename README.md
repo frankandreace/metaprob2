@@ -6,9 +6,11 @@
 - [Users' Guide](#uguide)
   - [Installation](#install)
   - [General usage](#general)
+  - [File accepted and structure](#file)
+  - [Output files](#out)
   - [Test Files](#test)
   - [Getting help](#help)
-  - [Citing metaprob2](#cite)
+[Citing metaprob2](#cite)
 
 
 ## <a name="uguide"></a>Users' Guide
@@ -45,16 +47,17 @@ MetaProb2 is a metagemomic binning tool that uses mapping and assembly software 
 We hereby provide the python3 and shell scripts to make the pipeline work without much effort.
 The usage of the 3 different softwares is well explained at the liks provided above. For non-custom usage, you can simply downlaod the softwares, the libraries, the 2 python3 scripts provided in this repository and the shell script.
 Set the parameters in the script: directories, files name and number of expected cluster. You can choose to provide no expected number of clusters: if so, please remove "-numSp $num" from MetaProb input.
-All minimap2, miniasm and metaprob parameters are tune to make the algorithms work as better as possible. You can change them anytime but please check the manuals before:   
+All minimap2, miniasm and metaprob parameters are tune to make the algorithms work as better as possible. You can change them anytime but please check the manuals before:  
 
-1.[Minimap2](https://lh3.github.io/minimap2/minimap2.html). 
+1.[Minimap2](https://lh3.github.io/minimap2/minimap2.html)  
 
-2.[Miniasm](http://manpages.ubuntu.com/manpages/bionic/man1/miniasm.1.html). 
+2.[Miniasm](http://manpages.ubuntu.com/manpages/bionic/man1/miniasm.1.html)  
 
-3.[MetaProb](https://bitbucket.org/samu661/metaprob/src/master/). 
+3.[MetaProb](https://bitbucket.org/samu661/metaprob/src/master/)  
 
+---
 
-#File accepted and structure
+##  <a name="file"></a>File accepted and structure
 File accepted have the following structure:  
 Structure file .fna example:  
 > \>IDENTIFICATION  
@@ -70,8 +73,23 @@ reads first (.1) and second end reads after (.2). The input file should look lik
 >read1.2  
 >read2.2  
 >...  
->read100.2  
+>read100.2   
+
 So we raccomend to control the paired-end read if they are paired in the correct manner.
+
+---
+
+##  <a name="out"></a>Output files
+During the process the tool will generate several additional files.
+1.The script file_generator creates a fasta file that has in the first half all the .1 sequences and in the second half all the .2 sequences.
+
+2.Minimap2 outputs paf files. You can learn more [here][paf]   
+
+3.Miniasm outputs gfa files. You can lear more [here][gfa]  
+
+4.The script community_detection generates a fasta file that will be used as input for metaprob. It contains the representatives of each identified cluster together with isolated unitigs and the reads that have not been grouped by minimap2. It provides also a csv with all the reads contained in each cluster and all the reads contained in each isolated unitig.  
+
+5.MetaProb gives as output a csv with the grouped sequences (during the first phase) and a csv with the final cluster for every input sequence.  
 
 ---
 
@@ -106,5 +124,6 @@ requests, you can raise an issue at the [issue page][issue]. You can also contac
 
 If you use metaprob2 in your work, please cite:
 
-
-
+[issue]: https://github.com/frankandreace/metaprob2/issues
+[paf]: https://github.com/lh3/miniasm/blob/master/PAF.md
+[gfa]: http://gfa-spec.github.io/GFA-spec/GFA1.html
