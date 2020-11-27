@@ -1,6 +1,5 @@
 # metaprob2
 
-
 ## Table of Contents
 
 - [Getting Started](#started)
@@ -32,7 +31,7 @@ You can also use:
 git clone https://github.com/lh3/miniasm  && (cd miniasm  && make)
 ```
 3. [MetaProb](https://bitbucket.org/samu661/metaprob/src/master/);    
-Once downloaded, go to  MetaProb/Release/ and then use: make all.
+[Download](https://bitbucket.org/samu661/metaprob/downloads/MetaProb_v2.tar.gz) it, go to  MetaProb/Release/ and then use: make all.
 
 You need gcc and zlib to install Minimap2 and Miniasm; You also need [Boost](https://www.boost.org/users/download/) and [Eingen](http://eigen.tuxfamily.org/index.php?title=Main_Page) libraries in the local directory to use MetaProb. 
 You need to install [scikit-network](https://scikit-network.readthedocs.io/en/latest/) for python3.  
@@ -46,6 +45,33 @@ MetaProb2 is a metagemomic binning tool that uses mapping and assembly software 
 We hereby provide the python3 and shell scripts to make the pipeline work without much effort.
 The usage of the 3 different softwares is well explained at the liks provided above. For non-custom usage, you can simply downlaod the softwares, the libraries, the 2 python3 scripts provided in this repository and the shell script.
 Set the parameters in the script: directories, files name and number of expected cluster. You can choose to provide no expected number of clusters: if so, please remove "-numSp $num" from MetaProb input.
+All minimap2, miniasm and metaprob parameters are tune to make the algorithms work as better as possible. You can change them anytime but please check the manuals before:   
+
+1.[Minimap2](https://lh3.github.io/minimap2/minimap2.html). 
+
+2.[Miniasm](http://manpages.ubuntu.com/manpages/bionic/man1/miniasm.1.html). 
+
+3.[MetaProb](https://bitbucket.org/samu661/metaprob/src/master/). 
+
+
+#File accepted and structure
+File accepted have the following structure:  
+Structure file .fna example:  
+> \>IDENTIFICATION  
+> ATAATTGGCAAGTGTTTTAGTCTTAGAGAGATTCTCTAAGTCTAACTTGAACTCAATTTGGAATCATTTCCCAATTTTTA
+
+In this version, paired-end reads are passed to the algorithm in two separeted files and then merged into one with all the reads in the first file followed by all the reads in the second one.
+Since we use an all vs all overlap tool, if you have 2 files with paired end reads, please use "file generator" script. If you have an interleaved fasta file, please put ALL first end 
+reads first (.1) and second end reads after (.2). The input file should look like this (if,for example, your sample has 100 paired end reads):  
+>read1.1  
+>read2.1  
+>...  
+>read100.1  
+>read1.2  
+>read2.2  
+>...  
+>read100.2  
+So we raccomend to control the paired-end read if they are paired in the correct manner.
 
 ---
 
@@ -79,4 +105,6 @@ requests, you can raise an issue at the [issue page][issue]. You can also contac
 ## <a name="cite"></a>Citing metaprob2
 
 If you use metaprob2 in your work, please cite:
+
+
 
