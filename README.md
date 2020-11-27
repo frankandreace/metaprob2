@@ -43,10 +43,10 @@ Please follow the guides provided at the links above to correctly install the to
 
 ##  <a name="general"></a>General Usage
 
-MetaProb2 is a metagemomic binning tool that uses mapping and assembly software together with a novel metagenomic community detection script to improve the results of MetaProb https://academic.oup.com/bioinformatics/article/32/17/i567/2450796 , https://bitbucket.org/samu661/metaprob/src/master/. 
+MetaProb2 is a metagemomic binning tool that uses mapping and assembly software together with a novel metagenomic community detection script to improve the results of [MetaProb](https://academic.oup.com/bioinformatics/article/32/17/i567/2450796), source code available [here](https://bitbucket.org/samu661/metaprob/src/master/). 
 We hereby provide the python3 and shell scripts to make the pipeline work without much effort.
-The usage of the 3 different softwares is well explained at the liks provided above. For non-custom usage, you can simply downlaod the softwares, the libraries, the 2 python3 scripts provided in this repository and the shell script.
-Set the parameters in the script: directories, files name and number of expected cluster. You can choose to provide no expected number of clusters: if so, please remove "-numSp $num" from MetaProb input.
+The usage of the 3 different softwares is well explained at the liks provided above. For non-custom usage, you can simply downlaod the softwares, the libraries, the 2 python3 scripts provided in this repository and the shell script.  
+Set the parameters in the script: directories, files name and number of expected cluster. You can choose to provide no expected number of clusters: if so, please remove "-numSp $num" from MetaProb input.  
 All minimap2, miniasm and metaprob parameters are tune to make the algorithms work as better as possible. You can change them anytime but please check the manuals before:  
 
 1.[Minimap2](https://lh3.github.io/minimap2/minimap2.html)  
@@ -64,7 +64,7 @@ Structure file .fna example:
 > ATAATTGGCAAGTGTTTTAGTCTTAGAGAGATTCTCTAAGTCTAACTTGAACTCAATTTGGAATCATTTCCCAATTTTTA
 
 In this version, paired-end reads are passed to the algorithm in two separeted files and then merged into one with all the reads in the first file followed by all the reads in the second one.
-Since we use an all vs all overlap tool, if you have 2 files with paired end reads, please use "file generator" script. If you have an interleaved fasta file, please put ALL first end 
+Since we use an all vs all overlap tool, if you have 2 files with paired end reads, please use "file generator" script.  If you have an interleaved fasta file, please put ALL first end 
 reads first (.1) and second end reads after (.2). The input file should look like this (if,for example, your sample has 100 paired end reads):  
 >read1.1  
 >read2.1  
@@ -83,9 +83,9 @@ So we raccomend to control the paired-end read if they are paired in the correct
 During the process the tool will generate several additional files.
 1.The script file_generator creates a fasta file that has in the first half all the .1 sequences and in the second half all the .2 sequences.
 
-2.Minimap2 outputs paf files. You can learn more [here][paf]   
+2.Minimap2 outputs paf files. You can learn more [here][paf].   
 
-3.Miniasm outputs gfa files. You can lear more [here][gfa]  
+3.Miniasm outputs gfa files. You can lear more [here][gfa].  
 
 4.The script community_detection generates a fasta file that will be used as input for metaprob. It contains the representatives of each identified cluster together with isolated unitigs and the reads that have not been grouped by minimap2. It provides also a csv with all the reads contained in each cluster and all the reads contained in each isolated unitig.  
 
