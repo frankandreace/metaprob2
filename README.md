@@ -13,7 +13,7 @@
 - [Limitations](#limit)
 
 ## <a name="uguide"></a>Users' Guide
-Abstract. Sequencing technologies allow the sequencing of microbial communities directly from the environment without prior culturing. One of the major problems when analyzing a microbial sample is to taxonom- ically annotate its reads to identify the species it contains. Taxonomic analysis of microbial communities requires reads clustering, a process referred to as binning. The major problems of metagenomics reads bin- ning are the lack of taxonomically related genomes in existing reference databases, the uneven abundance ratio of species, and sequencing errors. 
+Sequencing technologies allow the sequencing of microbial communities directly from the environment without prior culturing. One of the major problems when analyzing a microbial sample is to taxonom- ically annotate its reads to identify the species it contains. Taxonomic analysis of microbial communities requires reads clustering, a process referred to as binning. The major problems of metagenomics reads bin- ning are the lack of taxonomically related genomes in existing reference databases, the uneven abundance ratio of species, and sequencing errors. 
 In this paper we present MetaProb 2 an unsupervised binning method based on reads assembly and probabilistic k-mers statistics. The novelties of MetaProb 2 are the use of minimizers to efficiently assemble reads into unitigs and a community detection algorithm based on graph modularity to cluster unitigs and to detect representative unitigs. The effectiveness of MetaProb 2 is demonstrated in both simulated and synthetic datasets in comparison with state-of-art binning tools such as MetaProb, Abun- danceBin, Bimeta and MetaCluster.
 ---
 
