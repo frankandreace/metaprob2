@@ -15,6 +15,7 @@
 
 ## <a name="uguide"></a>Users' Guide
 Sequencing technologies allow the sequencing of microbial communities directly from the environment without prior culturing. One of the major problems when analyzing a microbial sample is to taxonom- ically annotate its reads to identify the species it contains. Taxonomic analysis of microbial communities requires reads clustering, a process referred to as binning. The major problems of metagenomics reads bin- ning are the lack of taxonomically related genomes in existing reference databases, the uneven abundance ratio of species, and sequencing errors. In this paper we present MetaProb 2 an unsupervised binning method based on reads assembly and probabilistic k-mers statistics. The novelties of MetaProb 2 are the use of minimizers to efficiently assemble reads into unitigs and a community detection algorithm based on graph modularity to cluster unitigs and to detect representative unitigs. The effectiveness of MetaProb 2 is demonstrated in both simulated and synthetic datasets in comparison with state-of-art binning tools such as MetaProb, Abun- danceBin, Bimeta and MetaCluster.
+
 ---
 
 ## <a name="install"></a>Installation
@@ -29,8 +30,9 @@ You can also use: git clone https://github.com/lh3/miniasm  && (cd miniasm  && m
 Once downloaded, go to  MetaProb/Release/ and then use: make all.
 
 You need gcc and zlib to install Minimap2 and Miniasm; You also need Boost (https://www.boost.org/users/download/) and Eingen (http://eigen.tuxfamily.org/index.php?title=Main_Page) libraries in the local directory to use MetaProb. 
-You need to install scikit-network for python3 (https://scikit-network.readthedocs.io/en/latest/).
+You need to install scikit-network for python3 (https://scikit-network.readthedocs.io/en/latest/).  
 Please follow the guides provided at the links above to correctly install the tools.
+
 ---
 
 ##  <a name="general"></a>General Usage
