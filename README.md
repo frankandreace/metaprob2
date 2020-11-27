@@ -1,7 +1,6 @@
 # metaprob2
 
 
-
 ## Table of Contents
 
 - [Getting Started](#started)
@@ -22,15 +21,21 @@ Sequencing technologies allow the sequencing of microbial communities directly f
 
 In order to work, MetaProb2 needs 3 pieces of sotfware:
 
-1. Minimap2, available  at https://github.com/lh3/minimap2;  
-You can also use: git clone https://github.com/lh3/minimap2 && (cd minimap2 && make)
-2. Miniasm, available at https://github.com/lh3/miniasm; 
-You can also use: git clone https://github.com/lh3/miniasm  && (cd miniasm  && make)
-3. MetaProb, available at https://bitbucket.org/samu661/metaprob/src/master/;  
+1. [Minimap2](https://github.com/lh3/minimap2);   
+You can also use: 
+```sh
+git clone https://github.com/lh3/minimap2 && (cd minimap2 && make)
+```
+2. [Miniasm](https://github.com/lh3/miniasm);   
+You can also use: 
+```sh
+git clone https://github.com/lh3/miniasm  && (cd miniasm  && make)
+```
+3. [MetaProb](https://bitbucket.org/samu661/metaprob/src/master/);    
 Once downloaded, go to  MetaProb/Release/ and then use: make all.
 
-You need gcc and zlib to install Minimap2 and Miniasm; You also need Boost (https://www.boost.org/users/download/) and Eingen (http://eigen.tuxfamily.org/index.php?title=Main_Page) libraries in the local directory to use MetaProb. 
-You need to install scikit-network for python3 (https://scikit-network.readthedocs.io/en/latest/).  
+You need gcc and zlib to install Minimap2 and Miniasm; You also need [Boost](https://www.boost.org/users/download/) and [Eingen](http://eigen.tuxfamily.org/index.php?title=Main_Page) libraries in the local directory to use MetaProb. 
+You need to install [scikit-network](https://scikit-network.readthedocs.io/en/latest/) for python3.  
 Please follow the guides provided at the links above to correctly install the tools.
 
 ---
@@ -74,3 +79,4 @@ requests, you can raise an issue at the [issue page][issue]. You can also contac
 ## <a name="cite"></a>Citing metaprob2
 
 If you use metaprob2 in your work, please cite:
+
