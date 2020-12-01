@@ -116,13 +116,14 @@ If you want to test the tool with some synthetic data, you can try with the same
 
 ## <a name="help"></a>Getting help
 If you encounter bugs or have further questions or
-requests, you can raise an issue at the [issue page][issue]. You can also contact Francesco Andreace at francesco.andreace@studenti.unipd.it .
+requests, you can raise an issue at the [issue page][issue]. You can also contact Francesco Andreace at francesco.andreace@unipd.it .
 
 ---
 
 ## <a name="cite"></a>Citing metaprob2
 
-If you use metaprob2 in your work, please cite:
+MetaProb 2 paper has been accepted at ICCABS 2020.
+If you use MetaProb 2 in your work, please cite:
 
 [issue]: https://github.com/frankandreace/metaprob2/issues
 [paf]: https://github.com/lh3/miniasm/blob/master/PAF.md
