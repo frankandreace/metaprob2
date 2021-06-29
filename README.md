@@ -49,7 +49,8 @@ The usage of the 3 different softwares is well explained at the liks provided ab
 Please set all the tools path in METAPROB2.sh to make it work properly. You can understand all the parameters by calling ./METAPROB2.sh -h  .  
 
 Usage example:  
-./METAPROB2 -s[number of expected species/genera]-c[minimum chain score] -t[number of cores to be used]-l <fasta/fastq input file> <output files name>. 
+./METAPROB2 -s[number of expected species/genera]-c[minimum chain score] -t[number of cores to be used]-l <fasta/fastq input file> <output files name> 
+  
   
 
 All minimap2, miniasm and metaprob parameters are tune to make the algorithms work as better as possible. You can change them anytime but please check the manuals before:  
