@@ -20,6 +20,11 @@ Sequencing technologies allow the sequencing of microbial communities directly f
 
 ## <a name="install"></a>Installation
 
+Download this repo using
+```sh
+git clone https://github.com/frankandreace/metaprob2.git
+```
+
 In order to work, MetaProb2 needs 3 pieces of sotfware:
 
 1. [Minimap2](https://github.com/lh3/minimap2);   
