@@ -1,0 +1,30 @@
+File: ../TestInputFile/short_example_1.fna.1
+File: ../TestInputFile/short_example_1.fna.2
+Norm: D2star_All_Read_Prob_Lmer_Euclidian
+N. Cluster: 4
+Parameter q: 30
+Parameter m: 5
+Parameter SeedSize: 9000
+Graph Type: Paired
+
+Read info File (seconds): 0.039766
+Loaded sequences: 40000
+Creation q-mer graph (seconds): 1.609548
+hash q-mer before filter: 1889665
+Creation adj graph (seconds): 0.213927
+hash q-mer filtered: 0
+Peak Virtual Memory used (MB): 572
+Virtual Memory used (MB): 561
+Creation groups (seconds): 0.043860
+Groups created: 13973
+N. Cluster: 4
+N. iter clustering: 1
+Converged: Si
+Clustering (seconds): 3.422972
+Total Computation (second): 5.484877
+
+Cluster details (id_cls,num_seq):
+0,14500
+1,16120
+2,5298
+3,4082
