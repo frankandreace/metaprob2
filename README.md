@@ -38,9 +38,9 @@ You can also use:
 git clone https://github.com/lh3/miniasm  && (cd miniasm  && make)
 ```
 3. [MetaProb](https://bitbucket.org/samu661/metaprob/src/master/);    
-[Download](https://bitbucket.org/samu661/metaprob/downloads/MetaProb_v2.tar.gz) it, go to  MetaProb/Release/ and then use: make all.
+Go to  MetaProb/Release/ and then use: make all. Be aware that the original version of MetaProb that can be found on Bitbucket is no longer woring nor mantained. Use the one present in this directory.
 
-You need gcc and zlib to install Minimap2 and Miniasm; You also need [Boost](https://www.boost.org/users/download/) and [Eingen](http://eigen.tuxfamily.org/index.php?title=Main_Page) libraries in the local directory to use MetaProb. 
+You need gcc and zlib to install Minimap2 and Miniasm; You also need [Boost](https://www.boost.org/users/download/) and [Eingen](http://eigen.tuxfamily.org/index.php?title=Main_Page) libraries to use MetaProb. You should move the two folders in /usr/local/include before installing MetaProb.
 You need to install [scikit-network](https://scikit-network.readthedocs.io/en/latest/) for python3.  
 Please follow the guides provided at the links above to correctly install the tools.
 
